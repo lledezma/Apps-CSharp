@@ -46,7 +46,6 @@ public class WebRequestGetExample
                 string[] age = item.Split("=");
                 foreach (var word in age )
                 {
-
                     if (word.Contains('}'))
                     {
                         if (int.Parse(word[0].ToString()) >= 50)
@@ -54,11 +53,11 @@ public class WebRequestGetExample
                             count+=1;
                         }
                     }
-                    else if (!word.Contains("age") &&  (int.Parse(word.ToString()) >= 50)             ){
+                    else if (!word.Contains("age") &&  (int.Parse(word.ToString()) >= 50))
+                    {
                         count+=1;
                     }
                 }
-
             }
         }
         Console.WriteLine(count);

@@ -52,7 +52,7 @@ public class WebRequestGetExample
         			{
         				if (word.Contains("N\\/A") || word.Contains("-") || word.Contains("\"\"") )
         				{
-        					
+        					continue;
         				}
         				else
         					newString = newString + word + '{';
@@ -66,9 +66,10 @@ public class WebRequestGetExample
         			{
         				if (word.Contains("N\\/A") || word.Contains("-") || word.Contains("\"\"") )
         				{
-        					
+        					continue;
         				}
-        				else{
+        				else
+                        {
         					if(newString.EndsWith(",")){
         						newString = newString.Remove(newString.Length - 1, 1);
         						newString = newString + word + "],";
@@ -81,7 +82,8 @@ public class WebRequestGetExample
         	else
         		newString = newString + item+ ",";
         }
-        if(newString.EndsWith(",")){
+        if(newString.EndsWith(","))
+        {
         	newString = newString.Remove(newString.Length - 1, 1);
         }
         Console.WriteLine("\n");
